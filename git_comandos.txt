@@ -1,0 +1,12 @@
+git init (iniciar repo)
+
+git status (ver estado [archivos, stage, repo])
+
+git log (registro de commits)
+
+git clone [link] (obtener repositorio de la nube)
+
+git commit -m "[mensaje]" (hacer un commit)
+
+git push (subir)
+git pull (obtener)
