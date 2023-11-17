@@ -10,14 +10,14 @@
 
             $conMySQL->setAttribute(PDO :: ATTR_ERRMODE,PDO :: ERRMODE_EXCEPTION);
             $conMySQL->exec("SET CHARACTER SET UTF8");
-            $sentenciaSQL="SELECT * FROM laboratorio_in WHERE usuario=:usuario AND password=:password";
+            $sentenciaSQL="SELECT * FROM laboratorio WHERE correo=:correo AND password=:password";
 
             $sentenciaPrep = $conMySQL->prepare($sentenciaSQL);
             
-            $usuario=htmlspecialchars(addslashes($_POST["usuario"]));
+            $correo=htmlspecialchars(addslashes($_POST["correo"]));
             $password=htmlspecialchars(addslashes($_POST["password"]));
 
-            $sentenciaPrep->execute(array(":usuario"=>$usuario,":password"=>$password));
+            $sentenciaPrep->execute(array(":correo"=>$correo,":password"=>$password));
   
             $numRegistros = $sentenciaPrep->rowCount();
             echo $numRegistros;
@@ -25,8 +25,8 @@
             if($numRegistros !=0)
             {
                 session_start();
-                $_SESSION["usuario"]=$_POST["usuario"];
-                header("Location:laboratorio.html");
+                $_SESSION["correo"]=$_POST["correo"];
+                header("Location:medicina.html");
                 printf("error");
             }
             else
