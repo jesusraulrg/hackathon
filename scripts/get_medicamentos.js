@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var listaMedicamentos = document.getElementById("medicamentos-lista");
-    var detallesMedicamento = document.getElementById("detalles-medicamento");
+    var listaMedicamentos = document.getElementById("lista-medicamentos");
+    var detallesMedicamento = document.getElementById("gestor");
 
     // Realizar una solicitud AJAX para obtener la lista de medicamentos
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "obtener_medicamentos.php", true);
+    xhr.open("GET", "get_medicamentos.php", true);
 
     xhr.onload = function () {
         if (xhr.status == 200) {
@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
             // Agregar botones a la lista
             medicamentos.forEach(function (medicamento) {
                 var boton = document.createElement("button");
-                boton.textContent = medicamento.nombre;
+                boton.textContent = medicamento.detalle;
 
                 boton.addEventListener("click", function () {
                     // Al hacer clic en el botón, mostrar los detalles del medicamento
-                    detallesMedicamento.textContent = medicamento.detalles;
+                    detallesMedicamento.textContent = medicamento.detalle;
                 });
 
                 var listItem = document.createElement("li");

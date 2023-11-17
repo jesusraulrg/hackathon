@@ -1,5 +1,5 @@
 <?php
-$bd_host = "127.0.0.1";
+$bd_host = "localhost";
 $bd_user = "root";
 $bd_pass = "";
 $bd_name = "hever";
@@ -13,8 +13,8 @@ if ($conn->connect_error) {
 }
 
 // Consulta SQL para obtener la lista de medicamentos
-$sql = "SELECT id, nombre, detalles FROM medicamentos";
-$result = $conn->query($sql);
+$medicamentos_query = "SELECT idm, detalle FROM medicamentos";
+$result = $conn->query($medicamentos_query);
 
 $medicamentos = array();
 
