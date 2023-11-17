@@ -1,8 +1,8 @@
 <?php
 $bd_host = "127.0.0.1";
-$bd_user = "tu_usuario_mysql";
-$bd_pass = "tu_contrasena_mysql";
-$bd_name = "tu_base_de_datos";
+$bd_user = "root";
+$bd_pass = "";
+$bd_name = "hever";
 
 // Crear conexión
 $conn = new mysqli($bd_host, $bd_user, $bd_pass, $bd_name);
