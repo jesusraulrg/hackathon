@@ -1,4 +1,4 @@
-bootwatch (bootstrap)
+bootswatch (bootstrap)
 
 https://bootswatch.com/
 
