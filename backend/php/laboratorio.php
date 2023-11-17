@@ -36,7 +36,7 @@
 
     if ($resultado = mysqli_query($conectar, $insertar))
     {
-        header("location: login.html");
+        header("location: ../../frontend/login.html");
     }
     else
     {

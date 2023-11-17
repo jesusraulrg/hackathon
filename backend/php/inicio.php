@@ -26,13 +26,13 @@
             {
                 session_start();
                 $_SESSION["correo"]=$_POST["correo"];
-                header("Location:medicina.html");
+                header("Location:../../frontend/login.html");
                 printf("error");
             }
             else
             {
 
-                header("Location:inicio.html");
+                header("Location:../../frontend/medicina.html");
             }
         }
         catch(Exception$e)
