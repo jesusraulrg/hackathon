@@ -6,6 +6,8 @@ git log (registro de commits)
 
 git clone [link] (obtener repositorio de la nube)
 
+git add . [cambia los archivos al stage antes de hacer un commit]
+
 git commit -m "[mensaje]" (hacer un commit)
 
 git push (subir)
