@@ -10,10 +10,15 @@
     $num_sede = htmlspecialchars($_POST["sede"]);
     $nombre = htmlspecialchars($_POST["empresa"]);
     $certificacion = htmlspecialchars($_POST["certificacion"]);
-    $ubicacion = htmlspecialchars($_POST["ubicacion"]);
+    $numeroext = htmlspecialchars($_POST["numeroext"]);
+    $calle = htmlspecialchars($_POST["calle"]);
+    $colonia = htmlspecialchars($_POST["colonia"]);
+    $municipio = htmlspecialchars($_POST["municipio"]);
+    $cp = htmlspecialchars($_POST["cp"]);
+    $estado = htmlspecialchars($_POST["estado"]);
 
-    $insertar = "INSERT INTO laboratorio (num_sede, nombre, certificacion, ubicacion)
-    VALUES ('$num_sede', '$nombre', '$certificacion', '$ubicacion')";
+    $insertar = "INSERT INTO laboratorio (num_sede, nombre, certificacion, numeroext, calle, colonia, municipio,cp,estado)
+    VALUES ('$num_sede', '$nombre', '$certificacion', '$numeroext','$calle','$colonia','$municipio','$cp','$estado')";
     
     $conectar = mysqli_connect($bd_host, $bd_user, $bd_pass, $bd_name, 3306);
 
@@ -24,8 +29,8 @@
     }
 
     mysqli_set_charset($conectar, "utf8");
-    $insertar = "INSERT INTO laboratorio (num_sede, nombre, certificacion, ubicacion)
-    VALUES ('$num_sede', '$nombre', '$certificacion', '$ubicacion')";
+    $insertar = "INSERT INTO laboratorio (num_sede, nombre, certificacion, numeroext, calle, colonia, municipio,cp,estado)
+    VALUES ('$num_sede', '$nombre', '$certificacion', '$numeroext','$calle','$colonia','$municipio','$cp','$estado')";
 
     if ($resultado = mysqli_query($conectar, $insertar))
     {
