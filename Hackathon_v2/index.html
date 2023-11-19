@@ -1,0 +1,22 @@
+<!DOCTYPE html> <html lang="es"> 
+<head> 
+<meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Catálogo de Medicamentos</title> 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
+<script src="script.js"></script> 
+</head> 
+<body> 
+    <h2>Catálogo de Medicamentos</h2> 
+    <form id="formAgregar"> <label for="descripcion">Descripción:</label> 
+        <input type="text" name="descripcion" id="descripcion" required> 
+        <button type="button" onclick="agregarMedicamento()">Agregar Medicamento</button> 
+    </form> 
+    <table border="1" id="tablaMedicamentos"> 
+        <tr> 
+            <th>ID</th> 
+            <th>Descripción</th> 
+            <th>Acciones</th> 
+        </tr> 
+    </table> 
+</body> 
+</html>

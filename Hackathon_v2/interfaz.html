@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de IDM</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #cbe6d4; /* Mismo color de fondo que el código de inicio de sesión */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #71BE8B; /* Mismo color de formulario que el código de inicio de sesión */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #002626;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #278C6F; /* Mismo color de botón que el código de inicio de sesión */
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #278c7b; /* Cambio de color al pasar el ratón, similar al código de inicio de sesión */
+        }
+
+        .logo-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 100%; /* Ajusta el tamaño máximo del logo según el ancho del contenedor */
+            height: auto;
+        }
+
+        /* Estilos responsive */
+        @media only screen and (max-width: 600px) {
+            form {
+                max-width: 90%; /* Reduce el ancho del formulario para pantallas pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Buscador de IDM</h1>
+    <form action="buscador_sku.php" method="POST">
+        <label for="idm" style="color: #ffffff;">Ingrese el IDM:</label>
+        <input type="text" name="idm" id="idm" required>
+
+        <label for="nombre" style="color: #ffffff;">Ingrese el Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required>
+
+        <button type="submit">Buscar</button>
+    </form>
+
+    <!-- Logo debajo del formulario -->
+    <div class="logo-container">
+        <img src="logo.png" alt="Logo" class="logo">
+    </div>
+</body>
+</html>
